@@ -102,17 +102,17 @@ None
 qa = QAmanager(base_url = "AI_url",model="modelname",api_key="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 ```
 
-#### 上传聊天对话
+### 上传聊天对话
 ```python
 qa.add_conversation('username','content')
 ```
 
-#### 添加问题
+### 添加问题
 ```python
 qa.add_question('question','answer',"source")
 ```
 
-#### RAGAPI
+### RAGAPI
 ```python
 # context 为 检索分块的结果
 qa.rag('query','context')
@@ -123,20 +123,20 @@ qa.rag('query','context')
 wx = KKSWx()
 ```
 
-#### 启动微信检测
+### 启动微信检测
 ```python
 # Input为窗口句柄
 # Output为消息队列，用于接收微信消息[get]
 queue = await wx.start(hwnd)
 ```
 
-#### 获取窗口句柄
+### 获取窗口句柄
 ```python
 # 输入为要监测的群名称，需要手动将对应的群窗口独立出来
 hwnd = wx.find_all_windows_by_keyword("微信")[0]['hwnd']
 ```
 
-#### 发送信息
+### 发送信息
 ```python
 # Input为窗口句柄，消息队列，要发送的信息
 wx.send_message(hwnd, answer['answer']) # 微信3.9版本
